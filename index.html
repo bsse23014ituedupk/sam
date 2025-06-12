@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Heart's Plea For Forgiveness 💘</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #ff6b8b, #ff8e53);
+      text-align: center;
+      color: #fff;
+      overflow-x: hidden;
+      min-height: 100vh;
+      position: relative;
+    }
+    
+    .container {
+      padding: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    
+    h1 {
+      margin-top: 2rem;
+      font-size: 3.5rem;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    
+    .love-letter {
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(5px);
+      border-radius: 20px;
+      padding: 2rem;
+      margin: 2rem 0;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+    
+    p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      margin: 1.5rem 0;
+      text-align: left;
+    }
+    
+    .highlight {
+      font-weight: bold;
+      color: #fffacd;
+      font-style: italic;
+    }
+    
+    .buttons {
+      margin: 2rem 0;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    
+    button {
+      background-color: rgba(255,255,255,0.9);
+      color: #ff4081;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      font-weight: bold;
+      min-width: 250px;
+    }
+    
+    button:hover {
+      background-color: #ff4081;
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    
+    button:active {
+      transform: translateY(1px);
+    }
+    
+    #videoContainer {
+      margin: 2rem auto;
+      width: 70%;
+      max-width: 500px;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+      position: relative;
+    }
+    
+    #videoContainer video {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+      background: #000;
+    }
+    
+    .video-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(transparent, rgba(0,0,0,0.2));
+      pointer-events: none;
+    }
+    
+    .ending {
+      font-size: 2rem;
+      margin: 2rem 0;
+      padding: 1.5rem;
+      background: rgba(255,255,255,0.1);
+      border-radius: 15px;
+      animation: glow 1.5s ease-in-out infinite alternate;
+    }
+    
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #ff4081, 0 0 20px #ff4081;
+      }
+      to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #ff4081, 0 0 40px #ff4081;
+      }
+    }
+    
+    .promises {
+      text-align: left;
+      margin: 2rem 0;
+      padding: 1rem;
+      background: rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+    
+    .promises li {
+      margin: 0.8rem 0;
+      list-style-type: none;
+      position: relative;
+      padding-left: 2rem;
+    }
+    
+    .promises li:before {
+      content: "❤";
+      position: absolute;
+      left: 0;
+      color: #ff4081;
+    }
+    
+    .heart {
+      position: fixed;
+      top: -10px;
+      width: 15px;
+      height: 15px;
+      background: #ff4081;
+      transform: rotate(45deg);
+      animation: fall linear forwards;
+      opacity: 0.8;
+      z-index: 0;
+    }
+    
+    .heart::before, .heart::after {
+      content: '';
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background: #ff4081;
+      border-radius: 50%;
+    }
+    
+    .heart::before {
+      top: -7.5px;
+      left: 0;
+    }
+    
+    .heart::after {
+      left: -7.5px;
+      top: 0;
+    }
+    
+    @keyframes fall {
+      to {
+        transform: translateY(100vh) rotate(360deg);
+      }
+    }
+    
+    .countdown {
+      font-size: 1.5rem;
+      margin: 1rem 0;
+      color: #fffacd;
+    }
+    
+    .love-meter {
+      width: 80%;
+      max-width: 400px;
+      height: 20px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 10px;
+      margin: 1rem auto;
+      overflow: hidden;
+    }
+    
+    .love-progress {
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(to right, #ff4081, #ff8e53);
+      border-radius: 10px;
+      animation: fillLove 3s forwards;
+    }
+    
+    @keyframes fillLove {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+    
+    .kiss {
+      position: fixed;
+      font-size: 24px;
+      animation: fly 4s linear forwards;
+      opacity: 0;
+      z-index: 10;
+    }
+    
+    @keyframes fly {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>My Dearest Love 💌</h1>
+    
+    <div class="love-letter">
+      <p>My beautiful angel,</p>
+      
+      <p>As I sit here trying to find the words to express how sorry I am, I realize no words can truly capture the depth of my regret. <span class="highlight">You are the most precious gift in my life</span>, and the thought that I've made you feel unappreciated breaks my heart into a thousand pieces.</p>
+      
+      <p>Every moment without your smile feels like an eternity. The way your laughter dances through the air, the way your eyes light up when you're happy - these are the things that give my life meaning. <span class="highlight">I was foolish to ever let you doubt my love</span>, and for that, I'm endlessly sorry.</p>
+      
+      <p>You are:</p>
+      
+      <div class="promises">
+        <li>My first thought in the morning and my last at night</li>
+        <li>The reason my heart still beats with hope</li>
+        <li>The missing piece that makes my life complete</li>
+        <li>My greatest blessing and my deepest love</li>
+      </div>
+      
+      <p>I promise from this moment forward to show you every day how much you mean to me. To cherish you, to listen to you, to be the partner you deserve. <span class="highlight">My love for you is infinite</span>, and I'll spend forever proving it to you.</p>
+      
+      <p>With all my heart and soul,</p>
+      <p style="text-align: right; font-style: italic;">Yours forever</p>
+    </div>
+    
+    <div class="love-meter">
+      <div class="love-progress"></div>
+    </div>
+    
+    <div class="countdown" id="countdown">My heart has been yours for 0 seconds...</div>
+    
+    <div class="buttons">
+      <button onclick="respond('yes')">💝 Yes My Love, I Forgive You</button>
+      <button onclick="respond('no')">💔 I Need More Time To Heal</button>
+    </div>
+    
+    <div id="videoContainer">
+      <div class="video-overlay"></div>
+    </div>
+    <div id="happyEnding"></div>
+  </div>
+  
+  <script>
+    // Enhanced falling hearts
+    function createHearts() {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      
+      // Random properties
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (Math.random() * 5 + 3) + 's';
+      heart.style.opacity = Math.random() * 0.5 + 0.3;
+      
+      // Random size
+      const size = Math.random() * 15 + 10;
+      heart.style.width = size + 'px';
+      heart.style.height = size + 'px';
+      
+      document.body.appendChild(heart);
+      
+      // Remove after animation
+      setTimeout(() => {
+        heart.remove();
+      }, 8000);
+    }
+    
+    // Create flying kiss animation
+    function createKiss() {
+      const kiss = document.createElement('div');
+      kiss.className = 'kiss';
+      kiss.innerHTML = '💋';
+      kiss.style.left = Math.random() * 100 + 'vw';
+      kiss.style.top = '80vh';
+      kiss.style.animationDuration = (Math.random() * 3 + 2) + 's';
+      document.body.appendChild(kiss);
+      
+      setTimeout(() => {
+        kiss.remove();
+      }, 4000);
+    }
+    
+    // Countup timer for love duration
+    function startCountup() {
+      let seconds = 0;
+      setInterval(() => {
+        seconds++;
+        const minutes = Math.floor(seconds / 60);
+        const hours = Math.floor(minutes / 60);
+        const days = Math.floor(hours / 24);
+        
+        let text = "My heart has been yours for ";
+        if (days > 0) text += `${days} day${days > 1 ? 's' : ''}, `;
+        if (hours > 0) text += `${hours % 24} hour${hours % 24 > 1 ? 's' : ''}, `;
+        text += `${minutes % 60} minute${minutes % 60 > 1 ? 's' : ''} and `;
+        text += `${seconds % 60} second${seconds % 60 > 1 ? 's' : ''}`;
+        
+        document.getElementById('countdown').textContent = text;
+      }, 1000);
+    }
+    
+    // Response handler with improved video display
+    function respond(choice) {
+      const videoContainer = document.getElementById('videoContainer');
+      const happyEnding = document.getElementById('happyEnding');
+      videoContainer.innerHTML = '<div class="video-overlay"></div>';
+      happyEnding.innerHTML = '';
+      
+      if (choice === 'yes') {
+        videoContainer.innerHTML += `
+          <video controls autoplay>
+            <source src="no.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        `;
+        
+        setTimeout(() => {
+          happyEnding.innerHTML = `
+            <div class="ending">
+              My heart overflows with joy! 💞<br>
+              Thank you for this precious gift of forgiveness.<br>
+              I promise to cherish you every moment of every day.<br>
+              Our love story is just beginning...
+            </div>
+          `;
+          
+          // Heart explosion and kisses
+          for (let i = 0; i < 50; i++) {
+            setTimeout(createHearts, i * 100);
+            if (i % 5 === 0) setTimeout(createKiss, i * 100);
+          }
+        }, 5000);
+      } else {
+        videoContainer.innerHTML += `
+          <video controls autoplay>
+            <source src="yes.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        `;
+        
+        setTimeout(() => {
+          happyEnding.innerHTML = `
+            <div class="ending">
+              I understand your pain completely.<br>
+              I'll wait patiently and prove my love every single day.<br>
+              You're worth every second of the wait, my love. 💘
+            </div>
+          `;
+        }, 5000);
+      }
+    }
+    
+    // Initialize
+    window.onload = function() {
+      // Create falling hearts every 300ms
+      setInterval(createHearts, 300);
+      
+      // Create occasional flying kisses
+      setInterval(createKiss, 2000);
+      
+      // Start the love countup
+      startCountup();
+    };
+  </script>
+</body>
+</html>
